@@ -4,7 +4,6 @@ import ctypes
 import signal
 import inspect
 import logging
-from functools import partial
 
 
 class MultiThreadClosing(object):
@@ -16,18 +15,10 @@ class MultiThreadClosing(object):
         self.threads = []
         self.int_signal_count = 1
         self.open()
-        def wrapper(logger):
-            level = {"debug":logging.DEBUG,
-                     "info":logging.INFO,
-                     "warn":logging.WARN,
-                     "error":logging.ERROR}
-            def getattr(self, item):
-                return partial(logger.log, level[item])
-            return type("feck", (object, ), {"__getattr__":getattr})
         log =logging.getLogger("root")
         log.setLevel(20)
         log.addHandler(logging.StreamHandler(sys.stdout))
-        self.logger = wrapper(log)()
+        self.logger = log
 
     def set_logger(self, logger):
         self.logger = logger
