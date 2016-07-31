@@ -1,4 +1,6 @@
 # 强制关闭子线程程序<br/>
+# 使用信号管理主线程子线程关闭及资源回收操作<br/>
+
 ├── multi_thread_closing.py<br/>
 ├── README.md<br/>
 └── test.py<br/>
