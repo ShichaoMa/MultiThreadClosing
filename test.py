@@ -26,4 +26,6 @@ class Test(MultiThreadClosing):
 
 
 if __name__ == "__main__":
-    Test().start()
+    t = Test()
+    t.set_logger()
+    t.start()
