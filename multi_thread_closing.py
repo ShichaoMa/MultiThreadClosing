@@ -49,7 +49,7 @@ class MultiThreadClosing(object):
         if not inspect.isclass(exctype):
             exctype = type(exctype)
         res = ctypes.pythonapi.PyThreadState_SetAsyncExc(tid, ctypes.py_object(exctype))
-        self.logger.debug("stop thread %s. "%name)
+        self.logger.info("stop thread %s. "%name)
         if res == 0:
             self.logger.error("invalid thread id")
             raise ValueError("invalid thread id")
