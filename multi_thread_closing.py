@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+import os
 import sys
 import ctypes
 import signal
@@ -28,8 +29,10 @@ class MultiThreadClosing(object):
     def stop(self, *args):
         if self.int_signal_count > 1:
             self.logger.info("force to terminate all the threads...")
-            for th in self.threads[:]:
-                self.stop_thread(th)
+            # for th in self.threads[:]:
+            #     self.stop_thread(th)
+            pid = os.getpid()
+            os.kill(pid, 9)
 
         else:
             self.alive = False
