@@ -7,6 +7,15 @@ import inspect
 import logging
 
 
+AUTHOR = "cn"
+
+AUTHOR_EMAIL = "308299269@qq.com"
+
+URL = "https://www.github.com/ShichaoMa/MultiThreadClosing"
+
+VERSION = "1.0.6"
+
+
 class MultiThreadClosing(object):
 
     alive = True

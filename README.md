@@ -2,7 +2,11 @@
 #INSTALL
 ##ubuntu
 ```bash
-git clone https://github.com/ShichaoMa/MultiThreadClosing.git
+    (sudo) pip install multi-thread-closing
+
+     or
+
+     git clone https://github.com/ShichaoMa/MultiThreadClosing.git
 ```
 #HELLOWORLD
 参见[test.py](https://github.com/ShichaoMa/MultiThreadClosing/blob/master/test.py)

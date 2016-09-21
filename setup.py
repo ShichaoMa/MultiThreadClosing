@@ -6,24 +6,19 @@ try:
 except:
     from distutils.core import setup
 
+from multi_thread_closing import AUTHOR, AUTHOR_EMAIL, VERSION, URL
+
+
 def read(fname):
     return codecs.open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 NAME = "multi-thread-closing"
 
-DESCRIPTION = "this is a test package for packing python liberaries tutorial."
+DESCRIPTION = "Multi thread closing."
 
 LONG_DESCRIPTION = read("README.rst")
 
 KEYWORDS = "multi thread management"
-
-AUTHOR = "cn"
-
-AUTHOR_EMAIL = "308299269@qq.com"
-
-URL = "https://www.github.com/ShichaoMa/MultiThreadClosing"
-
-VERSION = "1.0.4"
 
 LICENSE = "MIT"
 
