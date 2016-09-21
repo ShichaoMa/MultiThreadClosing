@@ -5,12 +5,13 @@ INSTALL
 -------
 ubuntu
 >>>>>>
-
-    - (sudo) pip install multi-thread-closing
-    - git clone https://github.com/ShichaoMa/MultiThreadClosing.git
+    ::
+     (sudo) pip install multi-thread-closing
+     git clone https://github.com/ShichaoMa/MultiThreadClosing.git
 HELLOWORLD
 ----------
-- 参见`test.py <https://github.com/ShichaoMa/MultiThreadClosing/blob/master/test.py>`_。
+- 参见 reference_。
+.. _reference: https://github.com/ShichaoMa/MultiThreadClosing/blob/master/test.py
 DESCRIPTION
 -----------
 - 使用信号管理主线程子线程关闭及资源回收操作
