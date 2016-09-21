@@ -13,7 +13,7 @@ NAME = "multi-thread-closing"
 
 DESCRIPTION = "this is a test package for packing python liberaries tutorial."
 
-LONG_DESCRIPTION = read("README.md")
+LONG_DESCRIPTION = read("README.rst")
 
 KEYWORDS = "multi thread management"
 
@@ -23,7 +23,7 @@ AUTHOR_EMAIL = "308299269@qq.com"
 
 URL = "https://www.github.com/ShichaoMa/MultiThreadClosing"
 
-VERSION = "1.0.1"
+VERSION = "1.0.4"
 
 LICENSE = "MIT"
 
