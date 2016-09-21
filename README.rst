@@ -6,6 +6,7 @@ INSTALL
 ubuntu
 >>>>>>
     ::
+
      (sudo) pip install multi-thread-closing
      git clone https://github.com/ShichaoMa/MultiThreadClosing.git
 HELLOWORLD
