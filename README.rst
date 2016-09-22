@@ -14,8 +14,8 @@ ubuntu
      git clone https://github.com/ShichaoMa/MultiThreadClosing.git
 HELLOWORLD
 ----------
-- 参见 reference_。
-.. _reference: https://github.com/ShichaoMa/MultiThreadClosing/blob/master/test.py
+- 参见 test.py_。
+.. _test.py: https://github.com/ShichaoMa/MultiThreadClosing/blob/master/test.py
 DESCRIPTION
 -----------
 - 使用信号管理主线程子线程关闭及资源回收操作
