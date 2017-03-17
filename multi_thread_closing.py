@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 import os
 import sys
-import ctypes
+#import ctypes
 import signal
-import inspect
+#import inspect
 import logging
 
 
@@ -13,7 +13,7 @@ AUTHOR_EMAIL = "308299269@qq.com"
 
 URL = "https://www.github.com/ShichaoMa/MultiThreadClosing"
 
-VERSION = "1.0.6"
+VERSION = "1.0.9"
 
 
 class MultiThreadClosing(object):
@@ -38,8 +38,8 @@ class MultiThreadClosing(object):
     def stop(self, *args):
         if self.int_signal_count > 1:
             self.logger.info("force to terminate all the threads...")
-            # for th in self.threads[:]:
-            #     self.stop_thread(th)
+            for th in self.threads[:]:
+                self.stop_thread(th)
             pid = os.getpid()
             os.kill(pid, 9)
 
@@ -55,24 +55,26 @@ class MultiThreadClosing(object):
     def set_force_interrupt(self, thread):
         self.threads.append(thread)
 
-    def _async_raise(self, name, tid, exctype):
-        """raises the exception, performs cleanup if needed"""
-        tid = ctypes.c_long(tid)
-        if not inspect.isclass(exctype):
-            exctype = type(exctype)
-        res = ctypes.pythonapi.PyThreadState_SetAsyncExc(tid, ctypes.py_object(exctype))
-        self.logger.info("stop thread %s. "%name)
-        if res == 0:
-            self.logger.error("invalid thread id")
-            raise ValueError("invalid thread id")
-        elif res != 1:
-            ctypes.pythonapi.PyThreadState_SetAsyncExc(tid, None)
-            self.logger.error("PyThreadState_SetAsyncExc failed")
-            raise SystemError("PyThreadState_SetAsyncExc failed")
+    # def _async_raise(self, name, tid, exctype):
+    #     """raises the exception, performs cleanup if needed"""
+    #     tid = ctypes.c_long(tid)
+    #     if not inspect.isclass(exctype):
+    #         exctype = type(exctype)
+    #     res = ctypes.pythonapi.PyThreadState_SetAsyncExc(tid, ctypes.py_object(exctype))
+    #     self.logger.info("stop thread %s. "%name)
+    #     if res == 0:
+    #         self.logger.error("invalid thread id")
+    #         raise ValueError("invalid thread id")
+    #     elif res != 1:
+    #         ctypes.pythonapi.PyThreadState_SetAsyncExc(tid, None)
+    #         self.logger.error("PyThreadState_SetAsyncExc failed")
+    #         raise SystemError("PyThreadState_SetAsyncExc failed")
 
     def stop_thread(self, thread):
-        self.logger.info("stopping thread %s"%thread.getName())
-        self._async_raise(thread.getName(), thread.ident, SystemExit)
-        self.logger.info("stopping thread %s finish" % thread.getName())
-        self.threads.remove(thread)
-        self.logger.info("remove thread %s " % thread.getName())
+        # self.logger.info("stopping thread %s"%thread.getName())
+        # self._async_raise(thread.getName(), thread.ident, SystemExit)
+        # self.logger.info("stopping thread %s finish" % thread.getName())
+        # self.threads.remove(thread)
+        # self.logger.info("remove thread %s " % thread.getName())
+        # Default is not suitable, please overwrite it or pass
+        pass

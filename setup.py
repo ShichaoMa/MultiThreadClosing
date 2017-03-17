@@ -1,6 +1,4 @@
 # -*- coding:utf-8 -*-
-import codecs
-import os
 try:
     from setuptools import setup
 except:
@@ -8,15 +6,15 @@ except:
 
 from multi_thread_closing import AUTHOR, AUTHOR_EMAIL, VERSION, URL
 
-
-def read(fname):
-    return codecs.open(os.path.join(os.path.dirname(__file__), fname)).read()
-
 NAME = "multi-thread-closing"
 
 DESCRIPTION = "Multi thread closing."
 
-LONG_DESCRIPTION = read("README.rst")
+try:
+    LONG_DESCRIPTION = open("README.rst").read()
+except UnicodeDecodeError:
+    LONG_DESCRIPTION = open("README.rst", encoding="utf-8").read()
+
 
 KEYWORDS = "multi thread management"
 
