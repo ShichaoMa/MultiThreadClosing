@@ -1,5 +1,5 @@
 #强制关闭子线程程序<br/>
-### 代码更新并合并到了(ParallelMonitor)[https://github.com/ShichaoMa/toolkit/blob/master/toolkit/monitors.py]中，请使用最新代码。
+### 代码更新并合并到了[ParallelMonitor](https://github.com/ShichaoMa/toolkit/blob/master/toolkit/monitors.py)中，请使用最新代码。
 #INSTALL
 ##ubuntu
 ```bash
